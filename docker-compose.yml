@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+    lb:
+        image: nginx
+        volumes:
+            - ./lb/docker/etc/nginx/conf.d:/etc/nginx/conf.d
+    webserver1:
+        image: nginx
+        volumes:
+            - ./webserver1/docker/usr/share/nginx/html:/usr/share/nginx/html
+    webserver2:
+        image: nginx
+        volumes:
+            - ./webserver2/docker/usr/share/nginx/html:/usr/share/nginx/html
